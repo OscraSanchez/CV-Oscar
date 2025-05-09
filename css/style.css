@@ -10,20 +10,71 @@ body {
 }
 
 /* Generales */
-.row {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr); /* Define una cuadrícula de 12 columnas de igual tamaño. */
-    gap: 15px; /* proporciona espacio entre las columnas. */
+
+.puntos {
+    position: relative; /* Necesario para posicionar el pseudo-elemento */
+    display: inline-block; /* Asegura que la línea occupe solo el espacio del texto */
+    font-size: 2rem;
 }
 
+.puntos::after {
+    content: ""; /* Necesario para el pseudo-elemento */
+    position: absolute;
+    bottom: -5px; /* Ajusta la distancia de la línea con respecto al texto */
+    left: 0%; /* Centra la línea debajo del texto */
+    width: 50%; /* Hace que la línea ocupe la mitad del ancho del texto */
+    border-bottom: 4px solid #4A6FA5; /* Estilo de la línea, ajustable según tus preferencias */
+}
+
+.fila {
+    display: flex; /* Esto activa el contenedor flex. Flexbox es un modelo de diseño moderno que permite que los elementos dentro del contenedor se alineen y distribuyan según ciertas reglas flexibles. */
+    flex-wrap: wrap; /* Hace que los elementos hijos dentro del contenedor .row apliquen un ajuste automático (wrap) cuando exceden el espacio disponible en la pantalla. Esto es útil para diseños responsivos donde las columnas deberían moverse a la siguiente fila al reducir el tamaño de la ventana. */
+    margin-right: -15px; /* Estas propiedades se utilizan para crear un espacio (gutter) entre las columnas. Los márgenes negativos contrarrestan el relleno aplicado a los elementos hijos (.columna-3 o similares), lo que hace que la fila ocupe el ancho completo del contenedor que la contiene. */
+    margin-left: -15px;
+}
+
+.columna-3 {
+    flex: 0 0 25%; /* Define una columna que ocupa un 25% del ancho del contenedor padre y no se permite que cambie su tamaño al expandirse (el primer y segundo valor 0). */
+    max-width: 25%; /* Establece el ancho máximo de la columna al 25% del contenedor padre para asegurar que no crezca más allá de ese tamaño. */
+    padding-right: 15px; /* Estos espaciados permiten mantener un gutter (margen/grosor) entre las columnas, lo cual es uniforme y asegura un diseño más limpio y organizado. */
+    padding-left: 15px;
+    box-sizing: border-box; /* Garantiza que el padding y el borde se incluyen en el cálculo total del ancho y altura del elemento, facilitando el control sobre el tamaño del mismo. */
+}
 .columna {
-    grid-column: span 6; /* Cambia esto según cuántas columnas quieres que abarque */
-    /* Permite que una columna ocupe varias columnas en la cuadrícula. Cambia X a cuántas columnas deseas que la columna se extienda. */
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;    
+}
+
+.columna-33 {
+    flex: 0 0 33%;
+    max-width: 33%;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;    
+}
+
+.efecto1 {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);;
+    padding: 2rem;
+    margin-bottom: 2rem;
 }
 
 .margenes {
     margin-left: 5%;
     margin-right: 5%;
+}
+
+.go {
+    margin-left: -5%;
+}
+
+.gogo {
+    margin-top: 1%;
 }
 
 /* Navegador */
@@ -116,30 +167,261 @@ body {
 
 
 /* Sobre Mi */
-
-.efecto1 {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);;
-    padding: 2rem;
-    margin-bottom: 2rem;
+#sobre_mi div h1 {
+    font-size: 2rem;
 }
+
+.foto1 {
+    width: 80%;
+}
+
+.go p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
+    padding-bottom: 6%;
+}
+
+.go p i {
+    color: #4A6FA5;
+}
+
+.info1 {
+    padding-top: 1%;
+    font-size: 1.2rem;
+}
+
+#extra h1 {
+    padding-bottom: 3%;
+}
+
+.uwu {
+    margin-right: 10%;
+    font-size: 1.2rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    padding-left: 22%;
+  }
+  
+  .social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #4A6FA5;
+    color: white;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .social-links a:hover {
+    background-color: #6C63FF;
+    transform: translateY(-3px);
+  }
+  .video {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Proporción 16:9 */
+    height: 0;
+    overflow: hidden;
+    margin: 1.5rem 0;
+  }
+
+/* Slider */
+
+.slider-wrapper {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .slider {
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 .25rem .5rem #21212126;
+    border-radius: .5rem;
+    overflow: hidden;
+  }
+  .slider a {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+  }
+  .slider a img {
+    width: 100%;
+  }
+  .slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+  .slider-nav a{
+    width: .5rem;
+    height: .5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: .75;
+    transition: opacity ease 250ms;
+  }
+  .slider-nav a:hover {
+    opacity: 1;
+  }
+  
+/* Habilidades */
+    .skills {
+        width: 300px;
+        margin: 50px auto;
+        padding: 20px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        font-family: Arial, sans-serif;
+    }
+
+    .skill {
+        margin-bottom: 20px;
+    }
+
+    .progress-container {
+        width: 100%;
+        background-color: #ddd;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .progress-bar {
+        padding: 5px;
+        text-align: right;
+        color: white;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+
+    .html { width: 70%; background: #ff5733; }
+    .css { width: 60%; background: #3498db; }
+    .redes { width: 60%; background: #f1c40f; }
+    .Mant { width: 55%; background: #8e44ad; }
+    .cons { width: 80%; background: #ff5733; }
+    .auto { width: 90%; background: #3498db; }
+    .dedi { width: 85%; background: #f1c40f; }
+    .inde { width: 100%; background: #8e44ad; }
+    .cat { width: 90%; background: #ff5733; }
+    .Cas { width: 90%; background: #3498db; }
+    .ing { width: 60%; background: #f1c40f; }
+
+
+
+    /* Estudios - Experiencia */
+
+    .education-item, .experience-item {
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #eee;
+    }
+      
+    .education-item:last-child, .experience-item:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+      
+    .timeline-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.5rem;
+    }
+      
+    .timeline-title {
+        color: #4A6FA5;
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+      
+    .timeline-period {
+        background-color: #4A6FA5;
+        color: white;
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.9rem;
+    }
+      
+    .timeline-subtitle {
+        color: #666666;
+        margin-bottom: 1rem;
+        font-style: italic;
+    }
+      
+    .mapa {
+        width: 100%;
+        height: 400px;
+        border: none;
+        border-radius: 8px;
+        margin: 2rem 0;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .img-tra {
+        width: 100%;
+        height: 400px;
+        border: none;
+        border-radius: 8px;
+        margin: 2rem 0;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+
+
 
 
 
 @media (max-width: 600px) { 
-    .navbar-list {
+   /* navegador */
+    .nav_lista {
         justify-content: center;   
     }
-    .navbar-item:first-child {
+    .nav_icono:first-child {
         margin-right: 0%;
     }
-    .navbar-item {
+    .nav_icono {
         padding: 1px 5%;
     }
+
+    /* Sobre mi */
+    .columna-3, .columna {
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+    .skills {
+        margin-left: -5%;
+    }
+
+    .timeline-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    /* Adjust map and image size for mobile */
+    .mapa, .img-tra {
+        height: 250px;
+    }
+
 }
 @media (max-width: 320px) { 
-    .navbar {
+    .nav {
         font-size: 1.5rem;
     }
 }

@@ -11,13 +11,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Boostrap -->
+    <!-- <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
     <!-- Titulo de la paguina -->
     <title>CV ~ Oscar</title>
 </head>
 <body>
     <nav class="nav">
         <ul class="nav_lista">
-            <li class="nav_icono"><a href="#idioma"><i class="fas fa-globe"></i> EN</a></li>
+            <li class="nav_icono"><a href="./view/index_en.html"><i class="fas fa-globe"></i> ES</a></li>
             <li class="nav_icono"><a href="#sobre_mi"><i class="fas fa-user"></i></a></li>
             <li class="nav_icono"><a href="#estudios"><i class="fas fa-graduation-cap"></i></a></li>
             <li class="nav_icono"><a href="#experiencia"><i class="fas fa-briefcase"></i></a></li>
@@ -30,18 +33,227 @@
         <br><br><br>
         <section id="sobre_mi">
             <div class="efecto1 margenes">
-                <h1>Sobre Mi</h1>
+                <h1 class="puntos">Sobre Mi</h1>
                 <br><br><br>
                 <div class="fila">
-                    <div class="columna">
-                        <img src="" alt="">
+                    <div class="columna-3">
+                        <img class="foto1" src="./img/Foto_1.jpg" alt="Foto_1">
                     </div>
-                    <div class="columna">
+                    <div class="columna-3 go gogo">
+                        <p><i class="fas fa-user"></i> Oscar Sanchez</p>
+                        <p><i class="fas fa-envelope"></i> 009drako@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> +34 640 00 09 83</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Barcelona, España</p>
+                    </div>
+                    <div class="columna info1">
+                        <p>Soy un apasionado Desarrollador Web novato que está en búsqueda de nuevos retos para ampliar mis conocimientos. Me encanta resolver problemas y aprender nuevas tecnologías para mejorar mis habilidades. </p>
+                    </div>
+                </div>
+                <br>
+                <div class="social-links">
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
 
+                <div class="video">
+                    <iframe width="1560" height="715" src="https://www.youtube.com/embed/jBoUbika4kE?si=XjAqK2hxAiv3kuGd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+            <br><br>
+            <div id="extra" class="efecto1 margenes">
+                <h1>Extra</h1>
+                <p class="uwu">En mis momentos de ocio, me sumerjo en la majestuosidad de la naturaleza, recorriendo senderos que despiertan mi espíritu aventurero y, sobre todo, desafiando alturas con la escalada, una pasión que me llena de emoción y adrenalina. Además, disfruto compartiendo risas y estrategias con amigos en el mundo de los videojuegos en línea.</p>
+                <br><br>
+                <section class="contaniner">
+                    <div class="slider-wrapper">
+                      <div class="slider">
+                          <img id="slider-1" src="./img/escalada/escalada1.jpg">
+                          <img id="slider-2" src="./img/escalada/escalada2.jpg">
+                          <img id="slider-3" src="./img/escalada/escalada3.jpg">
+                          <img id="slider-4" src="./img/escalada/escalada4.jpg">
+                          <img id="slider-5" src="./img/escalada/escalada5.jpg">
+                          <img id="slider-6" src="./img/escalada/escalada6.jpg">
+                      </div>
+                      <div class="slider-nav">
+                        <a href="#slider-1"></a>
+                        <a href="#slider-2"></a>
+                        <a href="#slider-3"></a>
+                        <a href="#slider-4"></a>
+                        <a href="#slider-5"></a>
+                        <a href="#slider-6"></a>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+            </div>
+            <br><br>
+            <div id="Habilidades" class="efecto1 margenes">
+                <h1>Habilidades</h1>
+                <br><br>
+                <div class="fila">
+                    <div class=".columna-33 margenes">
+                        <div class="skills">
+                            <h2>Mis Habilidades Tecnicas</h2>
+                            <div class="skill">
+                                <p>HTML</p>
+                                <div class="progress-container">
+                                    <div class="progress-bar html">70%</div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <p>CSS</p>
+                                <div class="progress-container">
+                                    <div class="progress-bar css">60%</div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <p>Redes</p>
+                                <div class="progress-container">
+                                    <div class="progress-bar redes">60%</div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <p>Mantenimiento de Equipo</p>
+                                <div class="progress-container">
+                                    <div class="progress-bar Mant">55%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=".columna-33 margenes">
+                        <div class="skills">
+                            <h2>Competencias</h2>
+                            <br>
+                            <br>
+                            <div class="skill">
+                                <p>Consistencia</p>
+                                <div class="progress-container">
+                                    <div class="progress-bar cons">80%</div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <p>Autoeficiencia</p>
+                                <div class="progress-container">
+                                    <div class="progress-bar auto">90%</div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <p>Dedicación</p>
+                                <div class="progress-container">
+                                    <div class="progress-bar dedi">85%</div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <p>Independiente</p>
+                                <div class="progress-container">
+                                    <div class="progress-bar inde">100%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=".columna-33 margenes">
+                        <div class="skills">
+                            <h2>Idiomas</h2>
+                            <br>
+                            <br>
+                            <div class="skill">
+                                <p>Catalán</p>
+                                <div class="progress-container">
+                                    <div class="progress-bar cat">90%</div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <p>Castellano</p>
+                                <div class="progress-container">
+                                    <div class="progress-bar Cas">90%</div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <p>Ingles</p>
+                                <div class="progress-container">
+                                    <div class="progress-bar ing">60%</div>
+                                </div>
+                                <br><br><br>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Estudios -->
+
+        <section id="estudios" class="education container">
+            <div class="efecto1 margenes">
+                <h2 class="puntos">Formación Académica</h2>
+                <br><br>
+                <div class="education-item">
+                    <div class="timeline-header">
+                    <h3 class="timeline-title">Ciclo Formativo de Grado Medio en Sistemas Microinformáticos y Redes</h3>
+                    <p class="timeline-period">2023 - Actualidad</p>
+              </div>
+              <p class="timeline-subtitle">Institut Joan XXIII - Bellvitge</p>
+              <p>En el Ciclo Formativo de Grado Medio en Sistemas Microinformáticos y Redes (SMX) adquieres conocimientos sobre instalación, configuración y mantenimiento de sistemas informáticos, redes locales y seguridad informática.</p>
+              <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.113048888293!2d2.104722275876641!3d41.34989647130467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a498d64bd023fd%3A0x26089fc39cb352a3!2sJesu%C3%AFtes%20Bellvitge%20-%20Centre%20d&#39;Estudis%20Joan%20XXIII!5e0!3m2!1ses!2ses!4v1746797366475!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+      
+            <div class="education-item">
+              <div class="timeline-header">
+                <h3 class="timeline-title">ESO - Educación Secundaria Obligatoria</h3>
+                <span class="timeline-period">2017 - 2021</span>
+              </div>
+              <p class="timeline-subtitle">Alpes - hospitalet de llobregat</p>
+              <p>Educación secundaria con enfoque en ciencias y tecnología.</p>
+              <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1904.6752648612949!2d2.097112245616742!3d41.362872764689186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4991861f67321%3A0x6c29ae4d881871c1!2sColegio%20Alpes!5e0!3m2!1ses!2ses!4v1746797345748!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </section>
+
+
+          <!-- Experiencia -->
+
+          <section id="experiencia">
+            <div class="efecto1 margenes">
+                <h2 class="puntos">Formación Laboral</h2>
+                <br><br>
+                <div class="education-item">
+                    <div class="timeline-header">
+                    <h3 class="timeline-title">Auxiliar de Informatico</h3>
+                    <p class="timeline-period">06-2024 - 12-2024</p>
+              </div>
+              <p class="timeline-subtitle">Escola Balaguer - L'Hospitalet de Llobregat</p>
+              <div class="fila">
+                <div class="columna"><img src="./img/Escola-balaguer.jpg" class="img-tra"></div>
+                <div class="columna"><iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.2899183077247!2d2.110474375877623!3d41.36778547130237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a498e434a03053%3A0xd54e487a43b07808!2sEscuela%20Balaguer!5e0!3m2!1ses!2ses!4v1746797941264!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+              </div>
+              </div>
+            <br><br>
+            <div class="education-item">
+              <div class="timeline-header">
+                <h3 class="timeline-title">Contabilidad</h3>
+                <span class="timeline-period">2022 - 2023</span>
+              </div>
+              <p class="timeline-subtitle">PAOS Asesores - Barcelona</p>
+              <div class="fila">
+                <div class="columna"><img src="./img/PAOS.jpeg" class="img-tra"></div>
+                <div class="columna">
+                    <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2991.091866079362!2d2.159916175881308!3d41.437228271293556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4bdacaba63dfd%3A0x8a94dde1d92fbf17!2sPaos%20Asesores!5e0!3m2!1ses!2ses!4v1746798077625!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+              </div>  
+            </div>
+            <br><br>
+            <div class="education-item">
+                <div class="timeline-header">
+                  <h3 class="timeline-title">Profesor de escalada</h3>
+                  <span class="timeline-period">2022 - 2023</span>
+                </div>
+                <p class="timeline-subtitle">UEC Horta - Barcelona</p>
+                <div class="fila">
+                    <div class="columna"><img src="./img/horta.jpg" class="img-tra"></div>
+                    <div class="columna"><iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2991.497283916378!2d2.1638334758808346!3d41.428430271294665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4bd364d32f0e5%3A0x17975c57aae42c99!2sUni%C3%B3%20Excursionista%20de%20Catalunya%20d&#39;Horta!5e0!3m2!1ses!2ses!4v1746798168927!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                </div>    
+            </div>
+          </section>
     </main>
 </body>
 </html>
